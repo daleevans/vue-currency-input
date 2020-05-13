@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "10"
+  - "13"
 install:
   - yarn install
   - yarn global add codecov
@@ -23,6 +23,7 @@ jobs:
     - stage: Publish npm package
       script: yarn build
       deploy:
+        edge: true
         on:
           branch: master
           tags: true

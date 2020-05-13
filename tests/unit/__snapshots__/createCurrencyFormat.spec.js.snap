@@ -1,100 +1,476 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`createCurrencyFormat de-DE_EUR 1`] = `
+exports[`createCurrencyFormat custom precision 1`] = `
 Object {
-  "decimalLength": 2,
   "decimalSymbol": ",",
+  "digits": Array [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+  ],
   "groupingSymbol": ".",
+  "maximumFractionDigits": 0,
+  "minimumFractionDigits": 0,
+  "minusSymbol": "-",
   "negativePrefix": "-",
   "prefix": "",
   "suffix": " €",
 }
 `;
 
-exports[`createCurrencyFormat en-GB_GBP 1`] = `
+exports[`createCurrencyFormat custom precision 2`] = `
 Object {
-  "decimalLength": 2,
-  "decimalSymbol": ".",
+  "decimalSymbol": ",",
+  "digits": Array [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+  ],
+  "groupingSymbol": ".",
+  "maximumFractionDigits": 0,
+  "minimumFractionDigits": 0,
+  "minusSymbol": "-",
+  "negativePrefix": "-",
+  "prefix": "",
+  "suffix": " €",
+}
+`;
+
+exports[`createCurrencyFormat custom precision 3`] = `
+Object {
+  "decimalSymbol": ",",
+  "digits": Array [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+  ],
+  "groupingSymbol": ".",
+  "maximumFractionDigits": 2,
+  "minimumFractionDigits": 0,
+  "minusSymbol": "-",
+  "negativePrefix": "-",
+  "prefix": "",
+  "suffix": "",
+}
+`;
+
+exports[`createCurrencyFormat custom precision 4`] = `
+Object {
+  "decimalSymbol": ",",
+  "digits": Array [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+  ],
+  "groupingSymbol": ".",
+  "maximumFractionDigits": 2,
+  "minimumFractionDigits": 0,
+  "minusSymbol": "-",
+  "negativePrefix": "-",
+  "prefix": "",
+  "suffix": " €",
+}
+`;
+
+exports[`createCurrencyFormat custom precision 5`] = `
+Object {
+  "decimalSymbol": undefined,
+  "digits": Array [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+  ],
   "groupingSymbol": ",",
+  "maximumFractionDigits": 0,
+  "minimumFractionDigits": 0,
+  "minusSymbol": "-",
+  "negativePrefix": "-￥",
+  "prefix": "￥",
+  "suffix": "",
+}
+`;
+
+exports[`createCurrencyFormat custom prefix/suffix 1`] = `
+Object {
+  "decimalSymbol": ",",
+  "digits": Array [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+  ],
+  "groupingSymbol": ".",
+  "maximumFractionDigits": 2,
+  "minimumFractionDigits": 2,
+  "minusSymbol": "-",
+  "negativePrefix": "-₿ ",
+  "prefix": "₿ ",
+  "suffix": "",
+}
+`;
+
+exports[`createCurrencyFormat custom prefix/suffix 2`] = `
+Object {
+  "decimalSymbol": ",",
+  "digits": Array [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+  ],
+  "groupingSymbol": ".",
+  "maximumFractionDigits": 2,
+  "minimumFractionDigits": 2,
+  "minusSymbol": "-",
+  "negativePrefix": "-",
+  "prefix": "",
+  "suffix": " Euro",
+}
+`;
+
+exports[`createCurrencyFormat custom prefix/suffix 3`] = `
+Object {
+  "decimalSymbol": ",",
+  "digits": Array [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+  ],
+  "groupingSymbol": ".",
+  "maximumFractionDigits": 2,
+  "minimumFractionDigits": 2,
+  "minusSymbol": "-",
+  "negativePrefix": "-",
+  "prefix": "",
+  "suffix": "",
+}
+`;
+
+exports[`createCurrencyFormat i18n ar-SA_SAR 1`] = `
+Object {
+  "decimalSymbol": "٫",
+  "digits": Array [
+    "٠",
+    "١",
+    "٢",
+    "٣",
+    "٤",
+    "٥",
+    "٦",
+    "٧",
+    "٨",
+    "٩",
+  ],
+  "groupingSymbol": "٬",
+  "maximumFractionDigits": 2,
+  "minimumFractionDigits": 2,
+  "minusSymbol": "-",
+  "negativePrefix": "؜-",
+  "prefix": "",
+  "suffix": " ر.س.‏",
+}
+`;
+
+exports[`createCurrencyFormat i18n de-CH_EUR 1`] = `
+Object {
+  "decimalSymbol": ".",
+  "digits": Array [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+  ],
+  "groupingSymbol": "’",
+  "maximumFractionDigits": 2,
+  "minimumFractionDigits": 2,
+  "minusSymbol": "-",
+  "negativePrefix": "$-",
+  "prefix": "$ ",
+  "suffix": "",
+}
+`;
+
+exports[`createCurrencyFormat i18n de-DE_EUR 1`] = `
+Object {
+  "decimalSymbol": ",",
+  "digits": Array [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+  ],
+  "groupingSymbol": ".",
+  "maximumFractionDigits": 2,
+  "minimumFractionDigits": 2,
+  "minusSymbol": "-",
+  "negativePrefix": "-",
+  "prefix": "",
+  "suffix": " €",
+}
+`;
+
+exports[`createCurrencyFormat i18n en-GB_GBP 1`] = `
+Object {
+  "decimalSymbol": ".",
+  "digits": Array [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+  ],
+  "groupingSymbol": ",",
+  "maximumFractionDigits": 2,
+  "minimumFractionDigits": 2,
+  "minusSymbol": "-",
   "negativePrefix": "-£",
   "prefix": "£",
   "suffix": "",
 }
 `;
 
-exports[`createCurrencyFormat en-IN_INR 1`] = `
+exports[`createCurrencyFormat i18n en-IN_INR 1`] = `
 Object {
-  "decimalLength": 2,
   "decimalSymbol": ".",
+  "digits": Array [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+  ],
   "groupingSymbol": ",",
+  "maximumFractionDigits": 2,
+  "minimumFractionDigits": 2,
+  "minusSymbol": "-",
   "negativePrefix": "-₹",
   "prefix": "₹",
   "suffix": "",
 }
 `;
 
-exports[`createCurrencyFormat en-US_USD 1`] = `
+exports[`createCurrencyFormat i18n en-US_USD 1`] = `
 Object {
-  "decimalLength": 2,
   "decimalSymbol": ".",
+  "digits": Array [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+  ],
   "groupingSymbol": ",",
+  "maximumFractionDigits": 2,
+  "minimumFractionDigits": 2,
+  "minusSymbol": "-",
   "negativePrefix": "-$",
   "prefix": "$",
   "suffix": "",
 }
 `;
 
-exports[`createCurrencyFormat es-ES_EUR 1`] = `
+exports[`createCurrencyFormat i18n es-ES_EUR 1`] = `
 Object {
-  "decimalLength": 2,
   "decimalSymbol": ",",
+  "digits": Array [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+  ],
   "groupingSymbol": ".",
+  "maximumFractionDigits": 2,
+  "minimumFractionDigits": 2,
+  "minusSymbol": "-",
   "negativePrefix": "-",
   "prefix": "",
   "suffix": " €",
 }
 `;
 
-exports[`createCurrencyFormat ja_JPY 1`] = `
+exports[`createCurrencyFormat i18n ja_JPY 1`] = `
 Object {
-  "decimalLength": 0,
-  "decimalSymbol": null,
+  "decimalSymbol": undefined,
+  "digits": Array [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+  ],
   "groupingSymbol": ",",
+  "maximumFractionDigits": 0,
+  "minimumFractionDigits": 0,
+  "minusSymbol": "-",
   "negativePrefix": "-￥",
   "prefix": "￥",
   "suffix": "",
 }
 `;
 
-exports[`createCurrencyFormat nl-NL_EUR 1`] = `
+exports[`createCurrencyFormat i18n nl-NL_EUR 1`] = `
 Object {
-  "decimalLength": 2,
   "decimalSymbol": ",",
+  "digits": Array [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+  ],
   "groupingSymbol": ".",
-  "negativePrefix": "US$ -",
-  "prefix": "US$ ",
+  "maximumFractionDigits": 2,
+  "minimumFractionDigits": 2,
+  "minusSymbol": "-",
+  "negativePrefix": "€ -",
+  "prefix": "€ ",
   "suffix": "",
 }
 `;
 
-exports[`createCurrencyFormat pt_BRL 1`] = `
+exports[`createCurrencyFormat i18n pt_BRL 1`] = `
 Object {
-  "decimalLength": 2,
   "decimalSymbol": ",",
+  "digits": Array [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+  ],
   "groupingSymbol": ".",
-  "negativePrefix": "-R$",
-  "prefix": "R$",
+  "maximumFractionDigits": 2,
+  "minimumFractionDigits": 2,
+  "minusSymbol": "-",
+  "negativePrefix": "-R$ ",
+  "prefix": "R$ ",
   "suffix": "",
 }
 `;
 
-exports[`createCurrencyFormat zh_CNY 1`] = `
+exports[`createCurrencyFormat i18n zh_CNY 1`] = `
 Object {
-  "decimalLength": 2,
   "decimalSymbol": ".",
+  "digits": Array [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+  ],
   "groupingSymbol": ",",
-  "negativePrefix": "-￥",
-  "prefix": "￥",
+  "maximumFractionDigits": 2,
+  "minimumFractionDigits": 2,
+  "minusSymbol": "-",
+  "negativePrefix": "-¥",
+  "prefix": "¥",
   "suffix": "",
 }
 `;

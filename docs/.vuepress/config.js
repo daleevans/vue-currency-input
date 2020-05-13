@@ -6,7 +6,9 @@ module.exports = {
     ['link', { rel: 'icon', href: '/favicon.png' }],
   ],
   themeConfig: {
+    smoothScroll: true,
     search: false,
+    editLinks: false,
     nav: [{
       text: 'Release Notes',
       link: 'https://github.com/dm4t2/vue-currency-input/releases'
@@ -15,12 +17,12 @@ module.exports = {
       '/': [
         '/guide/',
         '/config/',
-        '/examples/'
+        '/playground/',
+        '/api/'
       ]
     },
     repo: 'dm4t2/vue-currency-input',
     docsDir: 'docs',
-    docsBranch: 'gh-pages',
-    editLinks: false
+    docsBranch: 'gh-pages'
   }
 }

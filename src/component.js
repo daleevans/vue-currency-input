@@ -1,6 +1,6 @@
-import defaultOptions from './defaultOptions'
+import { DEFAULT_OPTIONS, setValue } from './api'
 import currencyDirective from './directive'
-import dispatchEvent from './utils/dispatchEvent'
+import createCurrencyFormat from './utils/createCurrencyFormat'
 
 export default {
   render (h) {
@@ -12,7 +12,21 @@ export default {
         name: 'currency',
         value: this.options
       }],
-      on: this.listeners()
+      on: {
+        ...this.$listeners,
+        change: e => {
+          if (e.detail) {
+            this.$emit('change', e.detail.numberValue)
+          }
+          this.formattedValue = this.$el.value
+        },
+        input: e => {
+          if (e.detail && this.value !== e.detail.numberValue) {
+            this.$emit('input', e.detail.numberValue)
+          }
+          this.formattedValue = this.$el.value
+        }
+      }
     })
   },
   directives: {
@@ -29,39 +43,47 @@ export default {
       default: undefined
     },
     currency: {
-      type: String,
+      type: [String, Object],
       default: undefined
     },
     distractionFree: {
       type: [Boolean, Object],
       default: undefined
     },
-    decimalLength: {
-      type: Number,
+    precision: {
+      type: [Number, Object],
       default: undefined
     },
     autoDecimalMode: {
       type: Boolean,
       default: undefined
     },
-    min: {
-      type: Number,
+    valueAsInteger: {
+      type: Boolean,
       default: undefined
     },
-    max: {
-      type: Number,
+    valueRange: {
+      type: Object,
+      default: undefined
+    },
+    allowNegative: {
+      type: Boolean,
       default: undefined
     }
   },
   data () {
     return {
-      formattedValue: this.value
+      formattedValue: null
     }
+  },
+  created () {
+    const { minimumFractionDigits, maximumFractionDigits } = createCurrencyFormat(this.options)
+    this.formattedValue = typeof this.value === 'number' ? this.value.toLocaleString(this.options.locale, { minimumFractionDigits, maximumFractionDigits }) : null
   },
   computed: {
     options () {
-      const options = { ...this.$CI_DEFAULT_OPTIONS || defaultOptions }
-      Object.keys(defaultOptions).forEach((key) => {
+      const options = { ...this.$CI_DEFAULT_OPTIONS || DEFAULT_OPTIONS }
+      Object.keys(DEFAULT_OPTIONS).forEach(key => {
         if (this[key] !== undefined) {
           options[key] = this[key]
         }
@@ -70,20 +92,11 @@ export default {
     }
   },
   watch: {
-    value (value) {
-      dispatchEvent(this.$el, 'format', { value })
-    }
+    value: 'setValue'
   },
   methods: {
-    listeners () {
-      const { input, ...listeners } = this.$listeners // all but input event
-      return {
-        ...listeners,
-        'format-complete': ({ detail }) => {
-          this.$emit('input', detail.numberValue)
-          this.formattedValue = this.$el.value
-        }
-      }
+    setValue (value) {
+      setValue(this.$el, value)
     }
   }
 }

@@ -1,8 +1,5 @@
 import buble from 'rollup-plugin-buble'
 import cleanup from 'rollup-plugin-cleanup'
-import clear from 'rollup-plugin-clear'
-import commonjs from 'rollup-plugin-commonjs'
-import resolve from 'rollup-plugin-node-resolve'
 import pkg from './package.json'
 
 const banner =
@@ -14,7 +11,7 @@ const banner =
 
 export default [
   {
-    input: 'src/plugin.js',
+    input: 'src/index.js',
     output: {
       format: 'esm',
       file: pkg.module,
@@ -22,10 +19,6 @@ export default [
       banner
     },
     plugins: [
-      clear({
-        targets: ['./dist']
-      }),
-      commonjs(),
       buble({
         objectAssign: true
       }),
@@ -46,8 +39,6 @@ export default [
       banner
     },
     plugins: [
-      commonjs(),
-      resolve(),
       buble({
         objectAssign: true
       }),
