@@ -34,7 +34,7 @@ export default [
     external: ['vue']
   },
   {
-    input: 'src/index.js',
+    input: 'src/plugin.js',
     output: {
       name: 'VueCurrencyInput',
       format: 'umd',
